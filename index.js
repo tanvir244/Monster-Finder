@@ -5,8 +5,6 @@ for(let monster of monsters){
     showMonsters(monster);
 }
 
-// showMonsters();
-showMonsters();
 function showMonsters(monster) {
     const monsterDiv = document.createElement('div');
     monsterDiv.className = "monster";
