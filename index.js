@@ -1,22 +1,26 @@
 import { monsters } from "./monsters.js";
 console.log(monsters);
 
-showMonsters();
-function showMonsters() {
+for(let monster of monsters){
+    showMonsters(monster);
+}
+
+// showMonsters();
+function showMonsters(monster) {
     const monsterDiv = document.createElement('div');
     monsterDiv.className = "monster";
 
     const img = document.createElement('img');
-    img.src = `https://robohash.org/6?set=set2`;
+    img.src = `https://robohash.org/${monster.id}?set=set2`;
     img.alt = "MD. Sakib Khan";
 
     const name = document.createElement('p');
     name.className = 'name';
-    name.innerText = 'MD. Sakib Khan';
+    name.innerText = monster.name;
 
     const email = document.createElement('p');
     email.className = 'email';
-    email.innerText = 'programmingwithsakib@gmail.com';
+    email.innerText = monster.email;
 
     monsterDiv.append(img, name, email);
 
