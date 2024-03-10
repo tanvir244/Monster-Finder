@@ -55,9 +55,9 @@ addEventListener('keyup', function (e) {
         const email = monster.children[2].innerText.toLowerCase();
         if(name.includes(keyword) || email.includes(keyword)){
             monster.style.display = 'block';
-            notFound = false;
         } else {
             monster.style.display = 'none';
+            notFound = false;
         }
 
         if(notFound){
