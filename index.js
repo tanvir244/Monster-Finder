@@ -6,6 +6,7 @@ for(let monster of monsters){
 }
 
 // showMonsters();
+showMonsters();
 function showMonsters(monster) {
     const monsterDiv = document.createElement('div');
     monsterDiv.className = "monster";
@@ -26,8 +27,8 @@ function showMonsters(monster) {
 
     document.querySelector('.monsters').append(monsterDiv);
 }
-showMonsters();
 
+notFound();
 function notFound() {
     const notFoundDiv = document.createElement('div');
     notFoundDiv.className = 'p-5 not-found';
@@ -43,4 +44,3 @@ function notFound() {
     
     document.querySelector('.monsters').append(notFoundDiv);
 }
-notFound();
