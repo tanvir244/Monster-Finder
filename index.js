@@ -48,7 +48,7 @@ addEventListener('keyup', function (e) {
     const keyword = e.target.value.toLowerCase();
     const monsters = document.querySelectorAll('.monster');
 
-    const notFound = true;
+    let notFound = true;
 
     for(let monster of monsters){
         const name = monster.children[1].innerText.toLowerCase();
@@ -66,4 +66,9 @@ addEventListener('keyup', function (e) {
             document.querySelector('.not-found').style.display = 'none';
         }
     }
+})
+
+document.querySelector('#search-monster-form').
+addEventListener('submit', e=> {
+    e.preventDefault();
 })
